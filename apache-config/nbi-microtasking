@@ -1,0 +1,22 @@
+# nbi microstaking apache config
+
+# webapp
+
+Alias /bridges /osm/software/nbi-microtask/webapp
+
+<Directory /osm/software/nbi-microtask/webapp>
+    Order deny,allow
+    Allow from all
+</Directory>
+
+# config for the python script
+
+WSGIScriptAlias /nbiservice /osm/software/nbi-microtask/service/get.py/
+
+Alias /nbiservice/static /osm/software/nbi-microtask/service/static/
+AddType text/html .py
+
+<Directory /osm/software/nbi-microtask/service/>
+        Order deny,allow
+        Allow from all
+</Directory>
