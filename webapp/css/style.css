@@ -1,6 +1,24 @@
 <style type="text/css">
   body{ height:100% }
 
+  .xhair {
+    cursor:crosshair;
+  }
+
+  #msgBox {
+    display:none;
+    z-index:1000;
+    text-align:center;
+    position:absolute;
+    left:30%;
+    width:40%;
+    max-height:90%;
+    font:12pt bold helvetica,sans-serif;
+    background-color:yellow;
+    padding:4px;
+    overflow:auto;
+  }
+
   div.fullscreen{
     display:block;
     position:absolute;
@@ -9,4 +27,25 @@
     width:100%;
     height:100%;
   }
+
+    div.banner {
+        text-align:center;
+        padding:4px;
+        font:14pt helvetica,sans-serif;
+        z-index:100;
+        position:absolute;
+        width:240px;
+        right:10px;
+        top:10px;
+        background-color:#FFFFFF;
+    }
+    
+    div.button {
+        text-decoration:underline;
+        cursor:pointer;
+    }
+    
+    span.button:hover {
+        cursor:pointer;
+    }
 </style>

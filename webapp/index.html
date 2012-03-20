@@ -2,13 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>leaflet example</title>
+    <title>Missing Bridges microtask</title>
     <link rel="stylesheet" type="text/css" href="leaflet/leaflet.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script type="text/javascript" src="leaflet/leaflet.js"></script>
-    <script type="text/javascript" src="leaflet/leafletembed.js"></script>
+    <script type="text/javascript" src="js/leaflet-bing.js"></script>
+    <script type="text/javascript" src="js/stuff.js"></script>
+    <script type="text/javascript" src="jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
   </head>
   <body onload=initmap()>
-      <div id="map" class="fullscreen"></div>
+    <div id="map" class="fullscreen"></div>
+    <div id="msgBox"></div>
+    <div class="banner">   
+        <strong>MISSING BRIDGES HERE?</strong> <small id="sublink" onClick="showAbout()">about / help</small> 
+        <div class="button" onClick=nextUp(1)>NO, MOVE ON</div>
+        <div class="button" onClick=nextUp(2)>NOT SURE, MOVE ON</div>
+        <div class=button onClick=startSelect()>YES, SELECT POINTS</div>
+        <div class=button onClick=openInJOSM()>YES, MAP IN JOSM</div>
+        <p></p>
+        <div class=button onClick=toggleLayers()>SWITCH LAYERS</div>
+    </div>
   </body>
 </html>
